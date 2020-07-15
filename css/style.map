@@ -2,11 +2,17 @@
 	"version": 3,
 	"file": "style.css",
 	"sources": [
-		"../sass/style.sass"
+		"../sass/style.sass",
+		"../sass/_mixins.sass",
+		"../sass/_fonts.scss",
+		"../sass/_colors.sass"
 	],
 	"sourcesContent": [
-		""
+		"@import 'mixins';\n@import 'fonts';\n@import 'colors';\n\nhtml {\n\tfont-size: 62.5%; }\n",
+		"@mixin centered {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center; }\n\n@mixin center {\n\talign-items: center;\n\tjustify-content: center; }\n\n@mixin absolute {\n\tposition: absolute;\n\ttop: 0;\n\tleft: 0; }\n\n@mixin layer {\n\t@include absolute;\n\twidth: 100%;\n\theight: 100%; }\n\n@mixin column {\n\tdisplay: flex;\n\tflex-direction: column; }\n",
+		"@font-face {\r\n    font-family: 'Muli';\r\n    src: url('Muli-Bold.ttf') format('truetype');\r\n    font-weight: bold;\r\n    font-style: normal;\r\n    font-display: swap;\r\n}\r\n\r\n@font-face {\r\n    font-family: 'Lora';\r\n    src: url('Lora-Regular.ttf') format('truetype');\r\n    font-weight: normal;\r\n    font-style: normal;\r\n    font-display: swap;\r\n}\r\n\r\n@font-face {\r\n    font-family: 'Muli';\r\n    src: url('Muli-Light.ttf') format('truetype');\r\n    font-weight: 300;\r\n    font-style: normal;\r\n    font-display: swap;\r\n}\r\n\r\n@font-face {\r\n    font-family: 'Muli';\r\n    src: url('Muli-Regular.ttf') format('truetype');\r\n    font-weight: normal;\r\n    font-style: normal;\r\n    font-display: swap;\r\n}\r\n\r\n@font-face {\r\n    font-family: 'Droid Serif';\r\n    src: url('DroidSerif.ttf') format('truetype');\r\n    font-weight: normal;\r\n    font-style: normal;\r\n    font-display: swap;\r\n}\r\n\r\n@font-face {\r\n    font-family: 'Muli';\r\n    src: url('Muli-SemiBold.ttf') format('truetype');\r\n    font-weight: 600;\r\n    font-style: normal;\r\n    font-display: swap;\r\n}\r\n\r\n@mixin f-muli{\r\n    font-family: 'Muli';\r\n}\r\n@mixin f-droid-serif{\r\n    font-family: 'Droid Serif';\r\n}\r\n@mixin f-lora{\r\n    font-family: 'Lora';\r\n}\r\n\r\n",
+		"$orange: #ffb46c;\n$black: #222222;\n$black-1: #000000;\n$gray: #898989;\n$purple-1: #f34a8a;\n$black-2: #041122;\n$gray-1: #919191;\n$black-3: #52575d;\n$black-4: #505050;\n$purple: #f72464;\n$gray-3: #c4c4c4;\n$gray-2: #838b8f;\n"
 	],
 	"names": [],
-	"mappings": ""
+	"mappings": "AEAA,UAAU;EACN,WAAW,EAAE,MAAM;EACnB,GAAG,EAAE,oBAAoB,CAAC,kBAAkB;EAC5C,WAAW,EAAE,IAAI;EACjB,UAAU,EAAE,MAAM;EAClB,YAAY,EAAE,IAAI;;;AAGtB,UAAU;EACN,WAAW,EAAE,MAAM;EACnB,GAAG,EAAE,uBAAuB,CAAC,kBAAkB;EAC/C,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,MAAM;EAClB,YAAY,EAAE,IAAI;;;AAGtB,UAAU;EACN,WAAW,EAAE,MAAM;EACnB,GAAG,EAAE,qBAAqB,CAAC,kBAAkB;EAC7C,WAAW,EAAE,GAAG;EAChB,UAAU,EAAE,MAAM;EAClB,YAAY,EAAE,IAAI;;;AAGtB,UAAU;EACN,WAAW,EAAE,MAAM;EACnB,GAAG,EAAE,uBAAuB,CAAC,kBAAkB;EAC/C,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,MAAM;EAClB,YAAY,EAAE,IAAI;;;AAGtB,UAAU;EACN,WAAW,EAAE,aAAa;EAC1B,GAAG,EAAE,qBAAqB,CAAC,kBAAkB;EAC7C,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,MAAM;EAClB,YAAY,EAAE,IAAI;;;AAGtB,UAAU;EACN,WAAW,EAAE,MAAM;EACnB,GAAG,EAAE,wBAAwB,CAAC,kBAAkB;EAChD,WAAW,EAAE,GAAG;EAChB,UAAU,EAAE,MAAM;EAClB,YAAY,EAAE,IAAI;;;;AFzCtB,AAAA,IAAI,CAAC;EACJ,SAAS,EAAE,KAAK;CAAG"
 }
