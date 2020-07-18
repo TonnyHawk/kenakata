@@ -1,0 +1,139 @@
+.nav-item
+	font-size: 2rem
+
+.nav
+	z-index: 100
+	width: 100%
+	position: relative
+	height: 6.6rem
+	transition: background 0.3s
+	@media (max-width: 56.25em)
+		display: flex
+		align-items: center
+	&__open-btn
+		margin-left: auto
+		margin-right: 2rem
+		display: none
+		@media (max-width: 56.25em)
+			display: block
+	&__open-btn, &__logo
+		z-index: 2
+	&__body
+		height: 100%
+		display: flex
+		justify-content: space-between
+		align-items: center
+		transition: 0.4s
+		z-index: 1
+		@media (max-width: 56.25em)
+			flex-direction: column
+			position: absolute
+			top: -500px
+			left: 0
+			background: black
+			height: max-content
+			padding-bottom: 2rem
+		&-item
+			display: flex
+		&.container
+			@media (max-width: 56.25em)
+				max-width: none
+
+	&__body-el, &__menu
+		display: flex
+		align-items: center
+	&__logo
+		margin-right: 6rem
+		&--pc
+			@media (max-width: 56.25em)
+				display: none
+		&--mob
+			display: none
+			@media (max-width: 56.25em)
+				display: block
+				position: absolute
+				left: 2rem
+		a
+			color: $black-2
+			font-family: 'Muli'
+			font-size: 2.2rem
+			font-weight: 400
+			text-transform: uppercase
+			letter-spacing: 0.22rem
+			text-transform: uppercase
+			transition: 0.2s
+
+	&__menu
+		@media (max-width: 56.25em)
+			flex-direction: column
+			padding-top: 6rem
+			padding-bottom: 4rem
+		&-item
+			color: $black-3
+			font-family: Muli
+			font-size: 1.5rem
+			font-weight: 400
+			margin-right: 2rem
+			text-transform: capitalize
+			@media (max-width: 56.25em)
+				margin-right: 0
+				margin-bottom: 3rem
+				font-size: 2.3rem
+
+	&__bucket
+		width: 50px
+		height: 50px
+		+centered
+		cursor: pointer
+
+.nav.open
+	background: black
+	.nav
+		&__body
+			top: 6.5rem
+		&__logo a
+			color: white
+
+.bucket
+	&__icon
+		position: relative
+	&__badge
+		font-size: 1rem
+		border-radius: 100%
+		background: red
+		position: absolute
+		bottom: -0.5rem
+		right: -0.5rem
+		color: white
+
+
+
+.burger-btn
+	height: max-content
+	&__bar1, &__bar2, &__bar3
+		width: 35px
+		height: 5px
+		background-color: #333
+		margin: 6px 0
+		transition: 0.4s, background-color 0.2s
+		display: block
+
+
+.burger-btn.change
+	.burger-btn__bar1 
+		-webkit-transform: rotate(-45deg) translate(-9px, 6px)
+		transform: rotate(-45deg) translate(-9px, 6px)
+
+.burger-btn.change
+	.burger-btn__bar2
+		opacity: 0
+
+.burger-btn.change 
+	.burger-btn__bar3 
+		-webkit-transform: rotate(45deg) translate(-8px, -8px)
+		transform: rotate(45deg) translate(-8px, -8px)
+
+.burger-btn.change
+	.burger-btn
+		&__bar1, &__bar2, &__bar3
+			background-color: #52575d

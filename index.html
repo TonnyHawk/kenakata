@@ -4,12 +4,57 @@
 	<meta charset="UTF-8">
 	<title>kenakata</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	
+	<nav class="nav">
+		<div class="nav__open-btn burger-btn" onclick="navController(this)">
+			<span class="burger-btn__bar1"></span>
+			<span class="burger-btn__bar2"></span>
+			<span class="burger-btn__bar3"></span>
+		</div>
+		<div class="nav__logo nav__logo--mob">
+			<a>kenakata</a>
+		</div>
+		<div class="nav__body container">
+			<div class="nav__body-item">
+				<div class="nav__logo nav__logo--pc">
+					<a>kenakata</a>
+				</div>
+				<div class="nav__menu">
+					<a href="" class="nav__menu-item">Colection</a>
+					<a href="" class="nav__menu-item">Men</a>
+					<a href="" class="nav__menu-item">Women</a>
+					<a href="" class="nav__menu-item">Blog</a>
+					<a href="" class="nav__menu-item">Faq</a>
+				</div>
+			</div>
+			<div class="nav__body-item">
+				<div class="nav__bucket bucket">
+					<div class="bucket__icon">
+						<img src="img/icons/shop-ic.svg" alt="">
+						<span class="bucket__badge badge badge-light">4</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<header id="header" class="header section">
+		<div class="container">
+			<img src="img/header/bg.jpg" alt="" class="header__bg">
+			<div class="header__promo promo">
+				<h1 class="promo__title">Kenakata Summer Collection</h1>
+				<p class="promo__text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui deserunt mollit anim id est laborum. </p>
+				<a href="" class="promo__btn btn">Shop Now</a>
+			</div>
+		</div>
+	</header>
+
+
 	<script src="js/jquery.min.js"></script>
+	<script src="js/custom.js"></script>
 </body>
 </html>

@@ -1,0 +1,58 @@
+.header
+	padding: 17.5rem 0
+	@media (max-width: 56.25em)
+		padding: 17.5rem 1.5rem
+	@media (max-width: 31.25em)
+		padding: 10rem 1.5rem
+	&__bg
+		position: absolute
+		top: 0
+		right: 0
+		height: 100%
+		z-index: 1
+
+	&__promo
+		z-index: 2
+		position: relative
+
+.promo
+	&__title
+		color: $black
+		font-family: Lora
+		font-size: 8rem
+		font-weight: 400
+		line-height: 10rem
+		max-width: 70.5rem
+		@media (max-width: 56.25em)
+			font-size: 5rem
+			line-height: 7rem
+		@media (max-width: 31.25em)
+			font-size: 3.8rem
+			line-height: 5rem
+	&__text
+		color: $black-3
+		font-family: Muli
+		font-size: 1.8rem
+		font-weight: 300
+		line-height: 3rem
+		max-width: 63.6rem
+		margin: 3.8rem 0 5.5rem
+		@media (max-width: 56.25em)
+			margin: 3rem 0 4rem
+
+	&__btn
+
+a.btn
+	display: block
+	color: #ffffff
+	font-family: Lora
+	font-size: 20px
+	font-weight: 400
+	line-height: 32px
+	box-shadow: 0 5px 30px rgba(31, 35, 37, 0.25)
+	border-radius: 3px
+	background-color: $purple
+	width: max-content
+	padding: 1.4rem 4.5rem
+	&:hover
+		color: white
