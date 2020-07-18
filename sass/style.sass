@@ -2,11 +2,79 @@
 @import 'fonts'
 @import 'colors'
 
-@import 'blocks/nav'
-@import 'sections/header'
-
 html
 	font-size: 62.5%
 
 .section
 	position: relative
+	display: flex
+	align-items: center
+	flex-direction: column
+	padding: 10rem 0
+	&__title
+		color: $black
+		font-family: "Droid Serif"
+		font-size: 3.5rem
+		font-weight: 400
+		text-transform: capitalize
+		margin-bottom: 1.8rem
+	&__descr
+		color: $gray-1
+		font-family: Muli
+		font-size: 1.2rem
+		font-weight: 300
+		text-transform: uppercase
+		margin-bottom: 10rem
+		@media (max-width: 36em)
+			font-size: 1.6rem
+			margin-bottom: 5rem
+	&__btn
+		display: block
+		width: max-content
+		border-radius: 3px
+		border: 1px solid $purple
+		text-align: center
+		padding: 1.4rem 4.7rem
+		color: $gray-1
+		font-family: Lora
+		font-size: 1.4rem
+		font-weight: 400
+		text-transform: uppercase
+		white-space: nowrap
+		margin-top: 2.1rem
+		transition: 0.4s
+		@media (max-width: 36em)
+			font-size: 2rem
+		&:hover
+			background: $purple
+			color: white
+
+a.btn
+	display: block
+	color: #ffffff
+	font-family: Lora
+	font-size: 20px
+	font-weight: 400
+	line-height: 32px
+	box-shadow: 0 5px 30px rgba(31, 35, 37, 0.25)
+	border-radius: 3px
+	background-color: $purple
+	width: max-content
+	padding: 1.4rem 4.5rem
+	text-transform: capitalize
+	white-space: nowrap
+	&:hover
+		color: white
+
+.layer
+	+layer
+
+.wrap-line
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+@import 'blocks/nav'
+@import 'blocks/product'
+@import 'blocks/banner'
+@import 'sections/header'
