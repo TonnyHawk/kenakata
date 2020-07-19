@@ -57,7 +57,7 @@ html {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 10rem 0;
+  padding: 10rem 2rem;
 }
 
 /* line 14, ../../Documents/GitHub/kenakata/sass/style.sass */
@@ -68,9 +68,10 @@ html {
   font-weight: 400;
   text-transform: capitalize;
   margin-bottom: 1.8rem;
+  text-align: center;
 }
 
-/* line 21, ../../Documents/GitHub/kenakata/sass/style.sass */
+/* line 22, ../../Documents/GitHub/kenakata/sass/style.sass */
 .section__descr {
   color: #919191;
   font-family: Muli;
@@ -78,17 +79,27 @@ html {
   font-weight: 300;
   text-transform: uppercase;
   margin-bottom: 10rem;
+  text-align: center;
+  max-width: 51.1rem;
 }
 
 @media (max-width: 36em) {
-  /* line 21, ../../Documents/GitHub/kenakata/sass/style.sass */
+  /* line 22, ../../Documents/GitHub/kenakata/sass/style.sass */
   .section__descr {
     font-size: 1.6rem;
     margin-bottom: 5rem;
   }
 }
 
-/* line 31, ../../Documents/GitHub/kenakata/sass/style.sass */
+/* line 34, ../../Documents/GitHub/kenakata/sass/style.sass */
+.section__descr--normal {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 2.5rem;
+  text-transform: none;
+}
+
+/* line 39, ../../Documents/GitHub/kenakata/sass/style.sass */
 .section__btn {
   display: block;
   width: max-content;
@@ -107,41 +118,36 @@ html {
 }
 
 @media (max-width: 36em) {
-  /* line 31, ../../Documents/GitHub/kenakata/sass/style.sass */
+  /* line 39, ../../Documents/GitHub/kenakata/sass/style.sass */
   .section__btn {
     font-size: 2rem;
   }
 }
 
-/* line 48, ../../Documents/GitHub/kenakata/sass/style.sass */
+/* line 56, ../../Documents/GitHub/kenakata/sass/style.sass */
 .section__btn:hover {
   background: #f72464;
   color: white;
 }
 
-/* line 52, ../../Documents/GitHub/kenakata/sass/style.sass */
-a.btn {
+/* line 60, ../../Documents/GitHub/kenakata/sass/style.sass */
+.btn {
   display: block;
   color: #ffffff;
-  font-family: Lora;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 32px;
-  box-shadow: 0 5px 30px rgba(31, 35, 37, 0.25);
-  border-radius: 3px;
+  border-radius: 0.3rem;
   background-color: #f72464;
   width: max-content;
-  padding: 1.4rem 4.5rem;
   text-transform: capitalize;
   white-space: nowrap;
-}
-
-/* line 66, ../../Documents/GitHub/kenakata/sass/style.sass */
-a.btn:hover {
-  color: white;
+  font-weight: 400;
 }
 
 /* line 69, ../../Documents/GitHub/kenakata/sass/style.sass */
+.btn:hover {
+  color: white;
+}
+
+/* line 72, ../../Documents/GitHub/kenakata/sass/style.sass */
 .layer {
   position: absolute;
   top: 0;
@@ -150,11 +156,19 @@ a.btn:hover {
   height: 100%;
 }
 
-/* line 72, ../../Documents/GitHub/kenakata/sass/style.sass */
+/* line 75, ../../Documents/GitHub/kenakata/sass/style.sass */
 .wrap-line {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 56.25em) {
+  /* line 75, ../../Documents/GitHub/kenakata/sass/style.sass */
+  .wrap-line {
+    flex-direction: column;
+  }
 }
 
 /* line 1, ../../Documents/GitHub/kenakata/sass/blocks/_nav.sass */
@@ -294,6 +308,7 @@ a.btn:hover {
   font-weight: 400;
   margin-right: 2rem;
   text-transform: capitalize;
+  transition: 0.2s;
 }
 
 @media (max-width: 56.25em) {
@@ -306,6 +321,11 @@ a.btn:hover {
 }
 
 /* line 83, ../../Documents/GitHub/kenakata/sass/blocks/_nav.sass */
+.nav__menu-item:hover {
+  color: #f72464;
+}
+
+/* line 86, ../../Documents/GitHub/kenakata/sass/blocks/_nav.sass */
 .nav__bucket {
   width: 50px;
   height: 50px;
@@ -315,27 +335,27 @@ a.btn:hover {
   cursor: pointer;
 }
 
-/* line 89, ../../Documents/GitHub/kenakata/sass/blocks/_nav.sass */
+/* line 92, ../../Documents/GitHub/kenakata/sass/blocks/_nav.sass */
 .nav.open {
   background: black;
 }
 
-/* line 92, ../../Documents/GitHub/kenakata/sass/blocks/_nav.sass */
+/* line 95, ../../Documents/GitHub/kenakata/sass/blocks/_nav.sass */
 .nav.open .nav__body {
   top: 6.5rem;
 }
 
-/* line 94, ../../Documents/GitHub/kenakata/sass/blocks/_nav.sass */
+/* line 97, ../../Documents/GitHub/kenakata/sass/blocks/_nav.sass */
 .nav.open .nav__logo a {
   color: white;
 }
 
-/* line 98, ../../Documents/GitHub/kenakata/sass/blocks/_nav.sass */
+/* line 101, ../../Documents/GitHub/kenakata/sass/blocks/_nav.sass */
 .bucket__icon {
   position: relative;
 }
 
-/* line 100, ../../Documents/GitHub/kenakata/sass/blocks/_nav.sass */
+/* line 103, ../../Documents/GitHub/kenakata/sass/blocks/_nav.sass */
 .bucket__badge {
   font-size: 1rem;
   border-radius: 100%;
@@ -346,12 +366,12 @@ a.btn:hover {
   color: white;
 }
 
-/* line 111, ../../Documents/GitHub/kenakata/sass/blocks/_nav.sass */
+/* line 114, ../../Documents/GitHub/kenakata/sass/blocks/_nav.sass */
 .burger-btn {
   height: max-content;
 }
 
-/* line 113, ../../Documents/GitHub/kenakata/sass/blocks/_nav.sass */
+/* line 116, ../../Documents/GitHub/kenakata/sass/blocks/_nav.sass */
 .burger-btn__bar1, .burger-btn__bar2, .burger-btn__bar3 {
   width: 35px;
   height: 5px;
@@ -361,24 +381,24 @@ a.btn:hover {
   display: block;
 }
 
-/* line 123, ../../Documents/GitHub/kenakata/sass/blocks/_nav.sass */
+/* line 126, ../../Documents/GitHub/kenakata/sass/blocks/_nav.sass */
 .burger-btn.change .burger-btn__bar1 {
   -webkit-transform: rotate(-45deg) translate(-9px, 6px);
   transform: rotate(-45deg) translate(-9px, 6px);
 }
 
-/* line 128, ../../Documents/GitHub/kenakata/sass/blocks/_nav.sass */
+/* line 131, ../../Documents/GitHub/kenakata/sass/blocks/_nav.sass */
 .burger-btn.change .burger-btn__bar2 {
   opacity: 0;
 }
 
-/* line 132, ../../Documents/GitHub/kenakata/sass/blocks/_nav.sass */
+/* line 135, ../../Documents/GitHub/kenakata/sass/blocks/_nav.sass */
 .burger-btn.change .burger-btn__bar3 {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px);
 }
 
-/* line 138, ../../Documents/GitHub/kenakata/sass/blocks/_nav.sass */
+/* line 141, ../../Documents/GitHub/kenakata/sass/blocks/_nav.sass */
 .burger-btn.change .burger-btn__bar1, .burger-btn.change .burger-btn__bar2, .burger-btn.change .burger-btn__bar3 {
   background-color: #52575d;
 }
@@ -507,14 +527,37 @@ a.btn:hover {
 
 /* line 1, ../../Documents/GitHub/kenakata/sass/blocks/_banner.sass */
 .banner {
-  padding: 6.5rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 6.5rem 0;
+  position: relative;
   background-color: #000000;
 }
 
-/* line 5, ../../Documents/GitHub/kenakata/sass/blocks/_banner.sass */
+/* line 6, ../../Documents/GitHub/kenakata/sass/blocks/_banner.sass */
+.banner__bg-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* line 9, ../../Documents/GitHub/kenakata/sass/blocks/_banner.sass */
+.banner__bg {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 12, ../../Documents/GitHub/kenakata/sass/blocks/_banner.sass */
+.banner__body {
+  position: relative;
+  z-index: 2;
+}
+
+/* line 15, ../../Documents/GitHub/kenakata/sass/blocks/_banner.sass */
 .banner__title {
   color: #ffffff;
   font-family: "Droid Serif";
@@ -523,17 +566,152 @@ a.btn:hover {
 }
 
 @media (max-width: 64.375em) {
-  /* line 5, ../../Documents/GitHub/kenakata/sass/blocks/_banner.sass */
+  /* line 15, ../../Documents/GitHub/kenakata/sass/blocks/_banner.sass */
   .banner__title {
     font-size: 4.5rem;
   }
 }
 
-/* line 13, ../../Documents/GitHub/kenakata/sass/blocks/_banner.sass */
+@media (max-width: 56.25em) {
+  /* line 15, ../../Documents/GitHub/kenakata/sass/blocks/_banner.sass */
+  .banner__title {
+    margin-bottom: 4rem;
+    text-align: center;
+    line-height: 6.5rem;
+  }
+}
+
+/* line 26, ../../Documents/GitHub/kenakata/sass/blocks/_banner.sass */
+.banner__btn {
+  font-family: "Droid Serif";
+  font-size: 2.2rem;
+  padding: 1.8rem 6rem;
+}
+
+/* line 30, ../../Documents/GitHub/kenakata/sass/blocks/_banner.sass */
 .banner__container {
   max-width: 114.1rem;
   width: 100%;
   padding: 0 3rem;
+}
+
+/* line 34, ../../Documents/GitHub/kenakata/sass/blocks/_banner.sass */
+.banner__brand {
+  width: 100%;
+  height: 7.6rem;
+  border-radius: 3px;
+  flex-shrink: 0;
+  background: #f7f6f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  max-width: 16rem;
+}
+
+@media (max-width: 75em) {
+  /* line 34, ../../Documents/GitHub/kenakata/sass/blocks/_banner.sass */
+  .banner__brand {
+    margin: 4rem 0;
+  }
+}
+
+@media (max-width: 36em) {
+  /* line 34, ../../Documents/GitHub/kenakata/sass/blocks/_banner.sass */
+  .banner__brand {
+    margin: 1.5rem 0;
+  }
+}
+
+/* line 47, ../../Documents/GitHub/kenakata/sass/blocks/_banner.sass */
+.banner__brand-img {
+  width: 100%;
+}
+
+/* line 1, ../../Documents/GitHub/kenakata/sass/blocks/_post.sass */
+.post {
+  display: flex;
+  margin-bottom: 7rem;
+}
+
+@media (max-width: 57.6rem) {
+  /* line 1, ../../Documents/GitHub/kenakata/sass/blocks/_post.sass */
+  .post {
+    flex-direction: column;
+  }
+}
+
+/* line 6, ../../Documents/GitHub/kenakata/sass/blocks/_post.sass */
+.post__photo {
+  height: 15.6rem;
+  width: 15.6rem;
+  margin-right: 3rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+@media (max-width: 57.6rem) {
+  /* line 6, ../../Documents/GitHub/kenakata/sass/blocks/_post.sass */
+  .post__photo {
+    margin-bottom: 2rem;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 36rem) {
+  /* line 6, ../../Documents/GitHub/kenakata/sass/blocks/_post.sass */
+  .post__photo {
+    width: 100%;
+    height: auto;
+    padding-bottom: 100%;
+  }
+}
+
+/* line 21, ../../Documents/GitHub/kenakata/sass/blocks/_post.sass */
+.post__body {
+  align-self: center;
+}
+
+@media (max-width: 57.6rem) {
+  /* line 21, ../../Documents/GitHub/kenakata/sass/blocks/_post.sass */
+  .post__body {
+    align-self: flex-start;
+  }
+}
+
+/* line 25, ../../Documents/GitHub/kenakata/sass/blocks/_post.sass */
+.post__title {
+  color: #222222;
+  font-family: "Droid Serif";
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 3rem;
+}
+
+/* line 31, ../../Documents/GitHub/kenakata/sass/blocks/_post.sass */
+.post__text {
+  color: #898989;
+  font-family: Muli;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 2.5rem;
+  margin: 1.4rem 0 1.7rem;
+}
+
+/* line 38, ../../Documents/GitHub/kenakata/sass/blocks/_post.sass */
+.post__link {
+  color: #222222;
+  font-family: "Droid Serif";
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+/* line 44, ../../Documents/GitHub/kenakata/sass/blocks/_post.sass */
+.post__link:after {
+  content: '>';
+  color: #f72464;
+  margin-left: 0.5rem;
+  font-weight: bold;
 }
 
 /* line 1, ../../Documents/GitHub/kenakata/sass/sections/_header.sass */
@@ -612,6 +790,154 @@ a.btn:hover {
   .promo__text {
     margin: 3rem 0 4rem;
   }
+}
+
+/* line 43, ../../Documents/GitHub/kenakata/sass/sections/_header.sass */
+.promo__btn {
+  font-size: 2rem;
+  font-weight: 400;
+  box-shadow: 0 0.5rem 3rem rgba(31, 35, 37, 0.25);
+  padding: 1.4rem 4.5rem;
+  font-family: "Droid Serif";
+}
+
+/* line 2, ../../Documents/GitHub/kenakata/sass/sections/_mailing.sass */
+#mailing .section__descr {
+  margin-bottom: 4.5rem;
+}
+
+/* line 4, ../../Documents/GitHub/kenakata/sass/sections/_mailing.sass */
+#mailing.section {
+  padding-top: 0;
+}
+
+/* line 8, ../../Documents/GitHub/kenakata/sass/sections/_mailing.sass */
+.mailing__form {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 48rem) {
+  /* line 8, ../../Documents/GitHub/kenakata/sass/sections/_mailing.sass */
+  .mailing__form {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* line 15, ../../Documents/GitHub/kenakata/sass/sections/_mailing.sass */
+.mailing__text-field {
+  width: 100%;
+  max-width: 25rem;
+  border-radius: 3px;
+  border: 0.1rem solid #f72464;
+  padding: 1.4rem 0;
+  text-align: center;
+  color: black;
+  font-size: 1.5rem;
+  margin-right: 4rem;
+}
+
+@media (max-width: 48rem) {
+  /* line 15, ../../Documents/GitHub/kenakata/sass/sections/_mailing.sass */
+  .mailing__text-field {
+    margin: 0 0 2rem;
+  }
+}
+
+/* line 27, ../../Documents/GitHub/kenakata/sass/sections/_mailing.sass */
+.mailing__text-field:placeholder {
+  color: #c4c4c4;
+  font-family: Muli;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+/* line 32, ../../Documents/GitHub/kenakata/sass/sections/_mailing.sass */
+.mailing__submit-btn {
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 1.5rem 2.8rem;
+  box-shadow: none;
+}
+
+/* line 1, ../../Documents/GitHub/kenakata/sass/sections/_footer.sass */
+.footer {
+  background-color: #000000;
+}
+
+/* line 3, ../../Documents/GitHub/kenakata/sass/sections/_footer.sass */
+.footer a {
+  color: white;
+  transition: 0.4s;
+}
+
+/* line 6, ../../Documents/GitHub/kenakata/sass/sections/_footer.sass */
+.footer a:hover {
+  color: #f72464;
+}
+
+/* line 8, ../../Documents/GitHub/kenakata/sass/sections/_footer.sass */
+.footer__links {
+  display: flex;
+}
+
+@media (max-width: 36em) {
+  /* line 8, ../../Documents/GitHub/kenakata/sass/sections/_footer.sass */
+  .footer__links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* line 13, ../../Documents/GitHub/kenakata/sass/sections/_footer.sass */
+.footer__link {
+  margin: 0 2rem;
+  font-family: Muli;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+@media (max-width: 36em) {
+  /* line 13, ../../Documents/GitHub/kenakata/sass/sections/_footer.sass */
+  .footer__link {
+    margin: 1.5rem 0;
+  }
+}
+
+/* line 21, ../../Documents/GitHub/kenakata/sass/sections/_footer.sass */
+.footer__social {
+  margin: 2.5rem 0;
+}
+
+@media (max-width: 36em) {
+  /* line 21, ../../Documents/GitHub/kenakata/sass/sections/_footer.sass */
+  .footer__social {
+    margin: 3rem 0 4rem;
+  }
+}
+
+/* line 25, ../../Documents/GitHub/kenakata/sass/sections/_footer.sass */
+.footer__soc-link {
+  font-size: 2rem;
+  margin: 0 1rem;
+}
+
+/* line 28, ../../Documents/GitHub/kenakata/sass/sections/_footer.sass */
+.footer__copyright {
+  color: #898989;
+  font-family: Muli;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 2.7rem;
+  text-align: center;
+}
+
+/* line 35, ../../Documents/GitHub/kenakata/sass/sections/_footer.sass */
+#footer.section {
+  padding: 3rem 2rem 4rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -10,7 +10,7 @@ html
 	display: flex
 	align-items: center
 	flex-direction: column
-	padding: 10rem 0
+	padding: 10rem 2rem
 	&__title
 		color: $black
 		font-family: "Droid Serif"
@@ -18,6 +18,7 @@ html
 		font-weight: 400
 		text-transform: capitalize
 		margin-bottom: 1.8rem
+		text-align: center
 	&__descr
 		color: $gray-1
 		font-family: Muli
@@ -25,9 +26,16 @@ html
 		font-weight: 300
 		text-transform: uppercase
 		margin-bottom: 10rem
+		text-align: center
+		max-width: 51.1rem
 		@media (max-width: 36em)
 			font-size: 1.6rem
 			margin-bottom: 5rem
+		&--normal
+			font-size: 1.5rem
+			font-weight: 300
+			line-height: 2.5rem
+			text-transform: none
 	&__btn
 		display: block
 		width: max-content
@@ -49,20 +57,15 @@ html
 			background: $purple
 			color: white
 
-a.btn
+.btn
 	display: block
 	color: #ffffff
-	font-family: Lora
-	font-size: 20px
-	font-weight: 400
-	line-height: 32px
-	box-shadow: 0 5px 30px rgba(31, 35, 37, 0.25)
-	border-radius: 3px
+	border-radius: 0.3rem
 	background-color: $purple
 	width: max-content
-	padding: 1.4rem 4.5rem
 	text-transform: capitalize
 	white-space: nowrap
+	font-weight: 400
 	&:hover
 		color: white
 
@@ -73,8 +76,14 @@ a.btn
 	display: flex
 	justify-content: space-between
 	align-items: center
+	flex-wrap: wrap
+	@media (max-width: 56.25em)
+		flex-direction: column
 
 @import 'blocks/nav'
 @import 'blocks/product'
 @import 'blocks/banner'
+@import 'blocks/post'
 @import 'sections/header'
+@import 'sections/mailing'
+@import 'sections/footer'

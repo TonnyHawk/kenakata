@@ -1,7 +1,17 @@
 .banner
-	padding: 6.5rem 0
 	+centered
+	padding: 6.5rem 0
+	position: relative
 	background-color: $black-1
+	&__bg-layer
+		+layer
+		z-index: 1
+	&__bg
+		width: 100%
+		height: 100%
+	&__body
+		position: relative
+		z-index: 2
 	&__title
 		color: #ffffff
 		font-family: "Droid Serif"
@@ -9,11 +19,34 @@
 		font-weight: 400
 		@media (max-width: 64.375em)
 			font-size: 4.5rem
+		@media (max-width: 56.25em)
+			margin-bottom: 4rem
+			text-align: center
+			line-height: 6.5rem
 	&__btn
+		font-family: "Droid Serif"
+		font-size: 2.2rem
+		padding: 1.8rem 6rem
 	&__container
 		max-width: 114.1rem
 		width: 100%
 		padding: 0 3rem	
+	&__brand
+		width: 100%
+		height: 7.6rem
+		border-radius: 3px
+		flex-shrink: 0
+		background: #f7f6f6
+		+centered
+		overflow: hidden
+		max-width: 16rem
+		@media (max-width: 75em)
+			margin: 4rem 0
+		@media (max-width: 36em)
+			margin: 1.5rem 0
+	&__brand-img
+		width: 100%
+
 
 .btn
 
