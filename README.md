@@ -1,1 +1,3 @@
-# kenakata
+## technology used
+* Bootstrap grid
+* Sass
